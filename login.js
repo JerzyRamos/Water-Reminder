@@ -1,6 +1,6 @@
 function registerUser(){
-    window.location.href = '/home.html';
+    window.open('../home.html')
 }
 function loginUser(){
-    window.location.href = '/home.html';
+    window.open('../home.html')
 }
