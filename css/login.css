@@ -1,68 +1,135 @@
-body {font-family: Arial, Helvetica, sans-serif; background-image: url("../src/bg.png");background-size: cover;}
-form {border: 3px solid #f1f1f1;}
-
-#loginForm {
-  margin-left: 400px;
-  margin-right: 400px;
-  margin-top: 300px;
-  margin-bottom: 300px;
-  background-color: #DCFAF8;
-}
-input[type=text], input[type=password] {
-  width: 100%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px solid #ccc;
-  box-sizing: border-box;
+@font-face {
+  font-family: MB;
+  src: url("fonts/Montserrat-Bold.otf") format("opentype");
 }
 
-button {
-  background-color: #4CAF50;
-  color: white;
-  padding: 14px 20px;
-  margin: 8px 0;
-  border: none;
-  cursor: pointer;
-  width: 100%;
+@font-face {
+  font-family: MR;
+  src: url("fonts/Montserrat-Regular.otf") format("opentype");
 }
 
-button:hover {
-  opacity: 0.8;
+@font-face {
+  font-family: ML;
+  src: url("fonts/Montserrat-Light.otf") format("opentype");
 }
 
-.cancelbtn {
-  width: auto;
-  padding: 10px 18px;
-  background-color: #f44336;
+@font-face {
+  font-family: MM;
+  src: url("fonts/Montserrat-Medium.otf") format("opentype");
 }
 
-.imgcontainer {
+body {
+  background-image: url("../src/bg.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  overflow:hidden;
+}
+
+.form-container {
+  margin: 0 auto;
   text-align: center;
-  margin: 24px 0 12px 0;
+  width: 400px;
+  background: #DCFAF8;
+  padding: 10px 60px 20px 60px;
+  border-radius: 0.3em;
+  margin-top: 20vh;
+  margin-bottom: 16vh;
 }
 
-img.avatar {
-  width: 40%;
-  border-radius: 50%;
+h1 {
+  font-size: 25px;
 }
 
-.container {
-  padding: 16px;
+h2 {
+  font-size: 13px;
+  font-family: ML;
+  color: #CFCFCF;
 }
 
-span.psw {
-  float: right;
-  padding-top: 16px;
+input[type=submit] {
+  background: #38BE99;
+  border: none;
+  color: white;
+  font-size: 20px;
+  width: 100%;
+  cursor: pointer;
 }
 
-/* Change styles for span and cancel button on extra small screens */
-@media screen and (max-width: 300px) {
-  span.psw {
-     display: block;
-     float: none;
-  }
-  .cancelbtn {
-     width: 100%;
-  }
+input[type=submit]:hover {
+  background: #22ad85;
+}
+
+input {
+  font-family: MM;
+  font-size: 15px;
+  padding: 18px 20px;
+  border: 1.5px solid #E7E7E7;
+  /*border:1px solid #38BE99;*/
+  width: 89%;
+  border-radius: 0.3em;
+  margin-bottom: 15px;
+  outline: 0;
+  transition: 0.3s;
+}
+
+input:focus {
+  border-color: #38BE99;
+}
+
+::placeholder {
+  color: #CFCFCF;
+}
+
+#loginMsg,
+#signupMsg,
+#userMsg,
+#indexMsg {
+  position: relative;
+  color: white;
+
+}
+
+#msg {
+  margin-top: -13vh;
+}
+
+#signUpLink {
+  display: inline;
+  text-decoration: none;
+  color: #38BE99;
+}
+#signUpLink:hover {
+  text-decoration: underline;
+}
+a {
+  color:white;
+  text-decoration: none;
+}
+p, #colorText {
+  color:white;
+}
+
+#link {
+  font-family: MM;
+  font-size: 15px;
+  padding: 18px 20px;
+  border: 1.5px solid #E7E7E7;
+  /*border:1px solid #38BE99;*/
+  width: 89%;
+  border-radius: 0.3em;
+  margin-bottom: 15px;
+  outline: 0;
+  transition: 0.3s;
+  background: #38BE99;
+  border: none;
+  color: white;
+  font-size: 20px;
+  width: 100%;
+  cursor: pointer;
+}
+
+#link:hover {
+  background: #22ad85;
 }
