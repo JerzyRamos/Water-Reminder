@@ -1,0 +1,86 @@
+@font-face {
+  font-family: showCard;
+  src: url(src/SHOWG.TTF);
+}
+
+body {
+  background-image: url("src/bg.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  overflow:hidden;
+}
+
+#top-container {
+  position:absolute;
+  width:100%;
+  margin:auto;
+  top:6%;
+  text-align:center;
+}
+
+#clock-container {
+  top:0;
+  font-family:showCard;
+  color:white;
+  font-size:14vh;
+  text-shadow: -2px 0 #7693A9,0 -2px #7693A9,2px 0 #7693A9,
+  0 2px #7693A9,5px 5px #7693A9,5px 0px #7693A9,0px 5px #7693A9;
+}
+
+/*------------------------------mid-----------------------------------*/
+
+#bottom-container {
+  position:absolute;
+  width:100%;
+  margin:auto;
+  bottom:10%;
+  text-align:center;
+}
+#flower-container {
+  margin:auto;
+  display:inline-block;
+  cursor:pointer;
+  transition:0.1s;
+  opacity:
+}
+#flower-container:hover {
+  opacity:0.9;
+}
+#flower-container:active {
+  opacity:1;
+}
+#flower {
+  display:block;
+  height:40vh;
+  margin:auto;
+}
+
+
+
+#progress-bar {
+  padding:0 28%;
+}
+#progress {
+  width: 0%;
+  height: 5vh;
+  background-color: #3acbf0;
+  text-align: center;
+  line-height: 5vh;
+  border-radius:20px;
+  color: white;
+  border-radius:2rem 0 0 2rem;
+  transition:0.2s;
+
+}
+.spacing {
+  height:5vh;
+}
+#bar {
+  width: 100%;
+  background-color: #FFF;
+  border-radius:2rem;
+  overflow:hidden;
+
+}

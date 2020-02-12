@@ -1,74 +1,30 @@
 <!doctype html>
 
 <html lang="en">
-<style>
-body {
-  background-image: url("src/bg.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
-  overflow:hidden;
-}
-
-#main-container {
-  position:absolute;
-  width:100%;
-  margin:auto;
-  bottom:10%;
-}
-#flower-container {
-  margin:auto;
-}
-#flower {
-  display:block;
-  height:300px;
-  margin:auto;
-}
-#progress-bar {
-  padding:0 500px;
-}
-#progress {
-  width: 10%;
-  height: 40px;
-  background-color: #3acbf0;
-  text-align: center;
-  line-height: 40px;
-  border-radius:20px;
-  color: white;
-  border-radius:2rem 0 0 2rem;
-
-}
-.spacing {
-  height:60px;
-}
-#bar {
-  width: 100%;
-  background-color: #FFF;
-  border-radius:2rem;
-  box
-
-}
-
-
-</style>
+<script src="script.js"></script>
 <head>
   <meta charset="utf-8">
 
-  <title>The HTML5 Template</title>
+  <title>Water Reminder</title>
   <meta name="description" content="The HTML5 Herald">
   <meta name="author" content="SitePoint">
 
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="main.css">
 
 </head>
 
-<body>
-  <script src="script.js"></script>
+<body onload="startTime()">
 
-  <div id="main-container">
-    <div id="flower-container">
-      <img id="flower" src="src/flower.png" alt="Flower">
+  <div id="top-container">
+    <div id="clock-container">
+      <div id="clock">
+      </div>
+    </div>
+  </div>
+  <div id="bottom-container">
+
+    <div id="flower-container" onclick="water()">
+      <img id="flower" src="src/flower.png" alt="Flower" onlick="water()">
     </div>
     <div class="spacing"></div>
     <div id="progress-bar">
