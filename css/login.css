@@ -1,4 +1,4 @@
-@font-face {
+/* @font-face {
   font-family: MB;
   src: url("fonts/Montserrat-Bold.otf") format("opentype");
 }
@@ -16,7 +16,7 @@
 @font-face {
   font-family: MM;
   src: url("fonts/Montserrat-Medium.otf") format("opentype");
-}
+} */
 
 body {
   background-image: url("../src/bg.png");
@@ -27,6 +27,12 @@ body {
   overflow:hidden;
 }
 
+#appName{
+  margin-top: 100px;
+  text-align: center;
+  color:#22ad85;
+  font-size:60px;
+}
 .form-container {
   margin: 0 auto;
   text-align: center;
@@ -34,9 +40,14 @@ body {
   background: #DCFAF8;
   padding: 10px 60px 20px 60px;
   border-radius: 0.3em;
-  margin-top: 20vh;
+  margin-top: 15vh;
   margin-bottom: 16vh;
 }
+
+#logo{
+  width:120px;
+  height:80px;
+  }
 
 h1 {
   font-size: 25px;
@@ -48,16 +59,17 @@ h2 {
   color: #CFCFCF;
 }
 
-input[type=submit] {
+button {
   background: #38BE99;
   border: none;
   color: white;
   font-size: 20px;
   width: 100%;
-  cursor: pointer;
+  padding: 18px 20px;
+  margin-bottom: 15px;
 }
 
-input[type=submit]:hover {
+button:hover {
   background: #22ad85;
 }
 
@@ -80,19 +92,6 @@ input:focus {
 
 ::placeholder {
   color: #CFCFCF;
-}
-
-#loginMsg,
-#signupMsg,
-#userMsg,
-#indexMsg {
-  position: relative;
-  color: white;
-
-}
-
-#msg {
-  margin-top: -13vh;
 }
 
 #signUpLink {

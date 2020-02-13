@@ -9,13 +9,16 @@
 </head>
         
 <body>  
+    
+    
+    <h1 id="appName"><img id = "logo" src="src/logo.png" alt="Logo">Water Reminder</h1>
     <div class="form-container">
         <h1 class="form-header">SIGN UP</h1><br>
-        <form method="POST" action="/signup">
-            <input type="text" id="username" name="username" placeholder="Username"><br>
-            <input type="email" id="email" name="email" placeholder="Email"><br>
-            <input type="password" id="password" name="password" placeholder="Password"><br>
-            <input type="submit" id="register" value="Register" onClick="registerUser()">
+        <form>
+            <input  id="username"  placeholder="Username"><br>
+            <input  id="email" placeholder="Email"><br>
+            <input  id="password" placeholder="Password"><br>
+            <button id="login" onclick="window.open('/home.html')">Register</button>
         </form>
         <div style="display:inline;color:#BFBFBF">Already have an account? </div>
         <a id="signUpLink" href="/Login.html">Log in</a><br><br>
