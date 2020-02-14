@@ -1,16 +1,49 @@
 @font-face {
   font-family: showCard;
-  src: url(src/SHOWG.TTF);
+  src: url(../src/SHOWG.TTF);
 }
 
 body {
-  background-image: url("src/bg.png");
+  background-image: url("../src/bg.png");
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
   overflow:hidden;
 }
+/*
+body::after{
+   position:absolute; width:0; height:0; overflow:hidden; z-index:-1; // hide images
+   content:url("../src/fl_surprised.png");   // load images
+}*/
+
+#top-container {
+  position:absolute;
+  width:100%;
+  margin:auto;
+  top:6%;
+  text-align:center;
+}
+
+#clock-container {
+  top:0;
+  font-family:showCard;
+  color:white;
+}
+
+#clock {
+  font-size:14vh;
+  text-shadow: -2px 0 #607b91,0 -2px #607b91,2px 0 #607b91,
+  0 2px #607b91,5px 5px #607b91,5px 0px #607b91,0px 5px #607b91;
+}
+
+#date {
+  margin-top:-2vh;
+  font-size:5vh;
+  text-shadow: -1px 0 #607b91,0 -1px #607b91,1px 0 #607b91,
+  0 1px #607b91,3px 3px #607b91,3px 0px #607b91,0px 3px #607b91;
+}
+
 
 .topright {
   position: absolute;
@@ -35,23 +68,6 @@ height:30px;
   width:80px;
   height:50px;
   }
-  
-#top-container {
-  position:absolute;
-  width:100%;
-  margin:auto;
-  top:6%;
-  text-align:center;
-}
-
-#clock-container {
-  top:0;
-  font-family:showCard;
-  color:white;
-  font-size:14vh;
-  text-shadow: -2px 0 #7693A9,0 -2px #7693A9,2px 0 #7693A9,
-  0 2px #7693A9,5px 5px #7693A9,5px 0px #7693A9,0px 5px #7693A9;
-}
 
 /*------------------------------mid-----------------------------------*/
 
@@ -70,7 +86,10 @@ height:30px;
   opacity:
 }
 #flower-container:hover {
-  opacity:0.9;
+  opacity:1;
+}
+#flower-container:hover #flower {
+  content:url("../src/fl_surprised.png");
 }
 #flower-container:active {
   opacity:1;
@@ -89,10 +108,10 @@ height:30px;
 #progress {
   width: 0%;
   height: 5vh;
-  background-color: #3acbf0;
+  background-color: #b1ebf0;
+  /*background-image: linear-gradient(to left, #a6dbe3, #b1ebf0);*/
   text-align: center;
   line-height: 5vh;
-  border-radius:20px;
   color: white;
   border-radius:2rem 0 0 2rem;
   transition:0.2s;
@@ -106,12 +125,26 @@ height:30px;
   background-color: #FFF;
   border-radius:2rem;
   overflow:hidden;
-
+  box-shadow: 3px 3px 4px #61a125;
 }
+
+#progress-text {
+  font-family: showCard;
+  left: 0px;
+  width: 100%;
+  color:#fff;
+  position:absolute; 
+  line-height:0;
+  bottom:2.5vh;
+  font-size:3vh;  
+  text-shadow: -1px 0 #607b91,0 -1px #607b91,1px 0 #607b91,
+  0 1px #607b91,3px 3px #607b91,3px 0px #607b91,0px 3px #607b91;
+}
+
 
 .sidebar {
   height: 100%;
-
+  width: 0;
   position: fixed;
   z-index: 1;
   top: 0;
@@ -193,3 +226,4 @@ select{
   padding: 18px 20px;
   margin-bottom: 15px;
 }
+© 2020 GitHub, Inc.
