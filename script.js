@@ -2,7 +2,14 @@ var count = getCookie("count");
 if (count =="") {
   count = 0;
 }
-var total = 10;
+var total;
+var freqVal = getCookie("freq");
+  if (freqVal == "") {
+    total = 18;
+  }
+  else {
+    total = 18/freqVal;
+  }
 
 function clearCookies() {
   setCookie("count",0,1);
@@ -12,6 +19,8 @@ function clearCookies() {
 function start() {
   getTime();
   getDate();
+  changeDefaultSetting();
+  changeProgress();
   var width = Math.round(count/total*100);
   document.getElementById('progress').style.width = width +"%";
   document.getElementById('progress-text').innerHTML = count+"/"+total;
@@ -95,8 +104,59 @@ function openSetting() {
   document.getElementById("main").style.marginLeft = "400px";
 }
 
+
 function closeSetting() {
   document.getElementById("mySidebar").style.width = "0";
   document.getElementById("main").style.marginLeft= "0";
 }
 
+function saveSetting() {
+  var goal = document.getElementById("goal");
+  var goalVal = goal.options[goal.selectedIndex].value;
+  setCookie("goal",goalVal,2);
+  var freq = document.getElementById("frequency");
+  var freqVal = freq.options[freq.selectedIndex].value;
+  setCookie("freq",freqVal,2);
+  changeProgress();
+  closeSetting();
+  //changeDefaultSetting();
+}
+
+function changeDefaultSetting() {
+  var goalVal = getCookie("goal");
+  var goal = document.getElementById("goal");
+
+  for(var i, j = 0; i = goal.options[j]; j++) {
+    if(i.value == goalVal) {
+      goal.selectedIndex = j;
+        break;
+    }
+  }
+  var freqVal = getCookie("freq");
+  var freq = document.getElementById("frequency");
+
+  for(var i, j = 0; i = freq.options[j]; j++) {
+    if(i.value == freqVal) {
+      freq.selectedIndex = j;
+        break;
+    }
+  }
+}
+
+function changeProgress() {
+  var oldTotal = total;
+  var freqVal = getCookie("freq");
+  if (freqVal == "") {
+    total = 18;
+  }
+  else {
+    total = 18/freqVal;
+  }
+  count = Math.round(total / oldTotal *count);
+  var width = Math.round(count/total*100);
+  document.getElementById('progress').style.width = width +"%";
+  document.getElementById('progress-text').innerHTML = count+"/"+total;
+
+  setCookie("count",count,1);
+  
+}

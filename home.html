@@ -13,7 +13,7 @@
 
 </head>
 <link rel="preload" as="image" href="src/fl_surprised.png">
-<body onload="start()">
+<body class="main" onload="start()">
 
 <div class="topLeft">   
     <img id="logo" src="src/logo.png" alt="Setting">
@@ -29,26 +29,26 @@
 
 <div id="mySidebar" class="sidebar">
   <a href="javascript:void(0)" class="closebtn" onclick="closeSetting()">×</a>
-  <form class="setting-form">
+  <form class="setting-form" onsubmit="event.preventDefault();">
   <h1 style="margin-bottom: 80px;">SETTING</h1>
   
   <label>DAILY GOAL: </label>
   <select id="goal" style="margin-bottom: 100px; display:inline-block">
     <option value="500">500ML</option>
-    <option value="saab">1000ML</option>
-    <option value="opel">1500ML</option>
-    <option value="audi">2000ML</option>
-    <option value="saab">2500ML</option>
-    <option value="opel">3000ML</option>
-    <option value="audi">3500ML</option>
-    <option value="audi">4000ML</option>
+    <option value="1000">1000ML</option>
+    <option value="1500">1500ML</option>
+    <option value="2000">2000ML</option>
+    <option value="2500">2500ML</option>
+    <option value="3000">3000ML</option>
+    <option value="3500">3500ML</option>
+    <option value="4000">4000ML</option>
   </select>
   <br>
   <label>Frequency: </label>
   <select id="frequency" style="margin-bottom: 100px; display:inline-block">
     <option value="1">1 Hour</option>
     <option value="2">2 Hours</option>
-    <option value="4">4 Hours</option>
+    <option value="3">3 Hours</option>
   </select>
   <br>
   <button id= "saveButton" onclick = "saveSetting()">Save</button>
