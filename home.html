@@ -14,13 +14,42 @@
 </head>
 
 <body class="main-container"onload="startTime()">
-  <div class="topright">
+  <div class="topLeft">   
+    <img id="logo" src="src/logo.png" alt="Setting">
+</div>
+
+  <div class="topright" onclick= "openSetting()">
     <button>
       <img id="setting" src="src/settings.png" alt="Setting">
     </button>
   </div>
-  <div class="topLeft">   
-      <img id="logo" src="src/logo.png" alt="Setting">
+
+  <div id="mySidebar" class="sidebar">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeSetting()">×</a>
+    <form class="setting-form">
+    <h1 style="margin-bottom: 80px;">SETTING</h1>
+    
+    <label>DAILY GOAL: </label>
+    <select id="goal" style="margin-bottom: 100px; display:inline-block">
+      <option value="500">500ML</option>
+      <option value="saab">1000ML</option>
+      <option value="opel">1500ML</option>
+      <option value="audi">2000ML</option>
+      <option value="saab">2500ML</option>
+      <option value="opel">3000ML</option>
+      <option value="audi">3500ML</option>
+      <option value="audi">4000ML</option>
+    </select>
+    <br>
+    <label>Frequency: </label>
+    <select id="frequency" style="margin-bottom: 100px; display:inline-block">
+      <option value="1">1 Hour</option>
+      <option value="2">2 Hours</option>
+      <option value="4">4 Hours</option>
+    </select>
+    <br>
+    <button id= "saveButton" onclick = "saveSetting()">Save</button>
+  </form>
   </div>
 
   <div id="top-container">
