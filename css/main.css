@@ -61,14 +61,28 @@ body::after{
 }
 
 #setting{
-width:28px;
-height:30px;
+width:50px;
+height:50px;
+cursor:pointer;
+opacity:0.8;
+transition:0.3s;
+}
+
+#setting:hover {
+  opacity:1;
 }
 
 #logo{
-  width:80px;
-  height:50px;
-  }
+  width:110px;
+  height:75px;
+  cursor:pointer;
+  opacity:0.8;
+transition:0.3s;
+}
+
+#logo:hover {
+  opacity:1;
+}
 
 /*------------------------------mid-----------------------------------*/
 
@@ -82,18 +96,20 @@ height:30px;
 #flower-container {
   margin:auto;
   display:inline-block;
-  cursor:pointer;
+  /* cursor:pointer; */
+  cursor: url("../src/water.png"), pointer;
   transition:0.1s;
-  opacity:
 }
 #flower-container:hover {
   opacity:1;
+  	
 }
 #flower-container:hover #flower {
   content:url("../src/fl_surprised.png");
 }
 #flower-container:active {
   opacity:1;
+  cursor: url("../src/water2.png"), pointer;
 }
 #flower {
   display:block;
@@ -145,24 +161,24 @@ height:30px;
 
 .sidebar {
   height: 100%;
-  width: 0;
+  width: 400px;
   position: fixed;
   z-index: 1;
   top: 0;
   right: 0;
   background-color: rgb(148, 199, 194);
   overflow-x: hidden;
-  transition: 0.5s;
   padding-top: 60px;
+  transform: translateX(400px);
 }
 
 .sidebar a {
   padding: 8px 8px 8px 32px;
   text-decoration: none;
-  font-size: 25px;
+  font-size: 35px;
   color: #818181;
   display: block;
-  transition: 0.3s;
+  transition: color 0.3s;
 }
 
 .sidebar a:hover {
@@ -173,7 +189,7 @@ height:30px;
   position: absolute;
   top: 0;
   right: 25px;
-  font-size: 36px;
+  font-size: 46px;
   margin-left: 50px;
 }
 
@@ -192,11 +208,19 @@ height:30px;
 
 .setting-form{
   margin-left: 20px;
+  margin-right: 20px;
   font-family:showCard;
   color:white;
   text-shadow: -2px 0 #7693A9,0 -2px #7693A9,2px 0 #7693A9,
   0 2px #7693A9,5px 5px #7693A9,5px 0px #7693A9,0px 5px #7693A9;
 }
+
+.setting-form label {
+  text-shadow: -2px 0 #7693A9,0 -2px #7693A9,2px 0 #7693A9,
+  0 2px #7693A9,3px 3px #7693A9,3px 0px #7693A9,0px 3px #7693A9;
+  padding-right:10px;
+}
+
 select{
   display: block;
     font-size: 16px;
@@ -216,16 +240,26 @@ select{
     -webkit-appearance: none;
     appearance: none;
     background-color: #fff;
+    cursor:pointer;
    
 }
 #saveButton{
-  background: #38BE99;
+  background: #607b91;
   border: none;
   color: white;
   font-size: 20px;
   width: 70%;
   padding: 18px 20px;
+  margin-left:15%;
+  margin-right:15%;
   margin-bottom: 15px;
+  border-radius:0.3em;
+  cursor:pointer;
+  transition: background 0.2s;
+}
+
+#saveButton:hover {
+  background: #4f687c;
 }
 
 
