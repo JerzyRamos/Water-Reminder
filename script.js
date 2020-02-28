@@ -61,6 +61,10 @@ function showBubble() {
   setTimeout(function(){
      bubble.style.opacity=1;
     }, 2000);
+
+    setTimeout(function(){
+      bubble.style.opacity=0;
+     }, 5000);
 }
 
 
@@ -110,14 +114,15 @@ function getCookie(cname) {
 }
 
 function openSetting() {
-  document.getElementById("mySidebar").style.width = "400px";
-  document.getElementById("main").style.marginLeft = "400px";
+  // document.getElementById("mySidebar").style.width = "400px";
+  // document.getElementById("main").style.marginLeft = "400px";
+  document.getElementById("mySidebar").style.transition = "0.3s";
+  document.getElementById("mySidebar").style.transform = "translateX(0px)";
 }
 
 
 function closeSetting() {
-  document.getElementById("mySidebar").style.width = "0";
-  document.getElementById("main").style.marginLeft= "0";
+  document.getElementById("mySidebar").style.transform = "translateX(400px)";
 }
 
 function saveSetting() {
