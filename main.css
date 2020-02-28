@@ -57,6 +57,9 @@ body::after{
   top: 8px;
   left: 4px;
   font-size: 18px;
+  padding: 0;
+  border: none;
+  background: none;
 }
 
 #setting{

@@ -47,12 +47,18 @@ body {
 #logo{
   width:120px;
   height:80px;
+  display: inline-block;
+  vertical-align: -15px;
   }
 
 h1 {
+  display:inline-block;
   font-size: 25px;
 }
 
+section{
+  text-align: center;
+}
 h2 {
   font-size: 13px;
   font-family: ML;
