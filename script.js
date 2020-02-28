@@ -122,7 +122,7 @@ function openSetting() {
 
 
 function closeSetting() {
-  document.getElementById("mySidebar").style.transform = "translateX(400px)";
+  document.getElementById("mySidebar").style.transform = "translateX(420px)";
 }
 
 function saveSetting() {
@@ -174,4 +174,28 @@ function changeProgress() {
 
   setCookie("count",count,1);
   
+}
+
+var today = new Date();
+var dd = today.getDate();
+var mm = today.getMonth()+1; //January is 0!
+var yyyy = today.getFullYear();
+ if(dd<10){
+        dd='0'+dd
+    } 
+    if(mm<10){
+        mm='0'+mm
+    } 
+
+today = yyyy+'-'+mm+'-'+dd;
+document.getElementById("history").setAttribute("max", today);
+
+
+function getRandomInt(max) {
+  return Math.floor(Math.random() * Math.floor(max) )* 10;
+}
+
+function getData(){
+
+  document.getElementById("history_data").innerHTML = "Completed  " + "<span  style='color: #66382E; font-size:25px;'>"+ getRandomInt(11)+"%</span>" + "  of your goal";
 }

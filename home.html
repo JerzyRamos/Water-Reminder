@@ -49,6 +49,17 @@
     <option value="3">3 Hours</option>
   </select>
   <br>
+  <div class="history_viewer">
+  <label for="history">Date:</label>
+  <input type="date" name="history" id="history" min='1899-01-01' max='2000-13-13'></input>
+ 
+  <section><button id= "check" onclick = "getData()">History</button>
+    <p class="data" id="history_data"></p></section>
+  
+  </div>
+  
+  <br>
+  
   <button id= "saveButton" onclick = "saveSetting()">Save</button>
 </form>
 </div>
