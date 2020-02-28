@@ -17,10 +17,12 @@ function clearCookies() {
 }
 
 function start() {
+
   getTime();
   getDate();
   changeDefaultSetting();
   changeProgress();
+  showBubble();
   var width = Math.round(count/total*100);
   document.getElementById('progress').style.width = width +"%";
   document.getElementById('progress-text').innerHTML = count+"/"+total;
@@ -51,6 +53,14 @@ function getDate() {
   var day = today.getDate();
   var index = today.getMonth();
   document.getElementById('date').innerHTML = months[index] + ' ' + day;
+}
+
+function showBubble() {
+  var bubble = document.getElementById("bubble");
+  
+  setTimeout(function(){
+     bubble.style.opacity=1;
+    }, 2000);
 }
 
 

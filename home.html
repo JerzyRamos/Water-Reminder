@@ -15,14 +15,12 @@
 <link rel="preload" as="image" href="src/fl_surprised.png">
 <body class="main" onload="start()">
 
-<div class="topLeft" title="Log Out" onclick="window.open('/Login.html')">   
-    <img id="logo" src="src/logo.png" alt="Logo">
+<div class="topLeft" onclick="window.open('/Login.html')" title="logout">   
+    <img id="logo" src="src/logo.png" alt="Setting">
 </div>
 
 <div class="topright" onclick= "openSetting()">
-  
     <img id="setting" src="src/settings.png" alt="Setting">
-
 </div>
 
 
@@ -68,6 +66,11 @@
     </div>
   </div>
   <div id="bottom-container">
+      
+
+    <div id="bubble">
+      Remember to water me!
+    </div>
 
     <div id="flower-container" onclick="water()">
       <img id="flower" src="src/fl_happy.png" alt="Flower" onlick="water()">
